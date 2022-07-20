@@ -15,7 +15,10 @@ public class HashTableMain {
         System.out.println(hashTable.getSize());
         hashTable.put(25, "Aziz25");
         System.out.println(hashTable.getSize());
-        System.out.println(hashTable.remove(25));
+        // System.out.println(hashTable.remove(25));
+        System.out.println(hashTable.get(10));
+        System.out.println(hashTable.get(25));
+
 
     }
 

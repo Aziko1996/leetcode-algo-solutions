@@ -58,7 +58,14 @@ public class HashTable<T, M> {
     }
 
     public M get(T key) {
-        return null;
+        int bucketIndex = getBucketIndex(key.hashCode());
+        HashNode<T, M> head = buckets[bucketIndex];
+        while (head != null) {
+            if (head.getKey().equals(key)) break;
+            head = head.getNext();
+        }
+        if (head == null) return null;
+        return head.getValue();
     }
 
     public boolean isEmpty() {
