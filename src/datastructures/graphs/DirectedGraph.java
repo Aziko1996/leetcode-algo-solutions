@@ -2,8 +2,7 @@ package datastructures.graphs;
 
 import java.util.*;
 
-public class DirectedGraph
-{
+public class DirectedGraph {
 
     /*public static void main(String[] args) {
         Map<Character, Character[]> graph = new HashMap<>();

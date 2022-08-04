@@ -4,6 +4,16 @@ import java.util.*;
 
 public class ShortestPathProblem {
 
+    public static void main(String[] args) {
+        PriorityQueue<AbstractMap.SimpleEntry<Integer, Integer>> queue =
+                new PriorityQueue<>(Map.Entry.comparingByValue());
+        queue.offer(new AbstractMap.SimpleEntry<>(1,2));
+        queue.offer(new AbstractMap.SimpleEntry<>(2,3));
+        queue.offer(new AbstractMap.SimpleEntry<>(0,4));
+
+        System.out.println(queue.poll().getValue());
+    }
+
     /*public static void main(String[] args) {
         Character[][] edges = new Character[][]{{'a', 'c'}, {'a', 'b'}, {'c', 'b'}, {'c', 'd'}, {'b', 'd'}, {'e', 'd'}, {'g', 'f'}};
         System.out.println(shortestPath(edges, 'b', 'g'));
